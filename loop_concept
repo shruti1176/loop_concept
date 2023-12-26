@@ -1,0 +1,38 @@
+public class LoopDemo {
+    public static void main(String[] args) {
+        // Using FOR loop to print numbers from 1 to 10
+        System.out.print("1. Using FOR loop: ");
+        for (int i = 1; i <= 10; i++) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+
+        // Using WHILE loop to print even numbers between 1 and 20
+        System.out.print("2. Using WHILE loop: ");
+        int j = 1;
+        while (j <= 20) {
+            if (j % 2 == 0) {
+                System.out.print(j + " ");
+            }
+            j++;
+        }
+        System.out.println();
+
+        // Using DO-WHILE loop for number validation
+        int userNumber = 3; // Predefined variable within the range of 1 to 10
+        System.out.print("3. Using DO-WHILE loop: ");
+        do {
+            // Validate if userNumber is within the range
+            if (userNumber >= 1 && userNumber <= 10) {
+                break; // Exit the loop if the number is valid
+            } else {
+                // If not valid, prompt user to enter again
+                System.out.println("Please enter a number within the range of 1 to 10.");
+                // In a real program, you might read user input here
+                // For the sake of the example, let's assume userNumber is updated in the next iteration
+            }
+        } while (true);
+
+        System.out.println("You entered " + userNumber + ".");
+    }
+}
